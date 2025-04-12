@@ -1,0 +1,8 @@
+com/example/cdc/FlinkCdcApplication.class
+META-INF/spring-configuration-metadata.json
+com/example/cdc/config/AppProperties$Kafka.class
+com/example/cdc/FlinkJobRunner.class
+com/example/cdc/FlinkJobRunner$SimpleKafkaSink.class
+com/example/cdc/config/AppProperties.class
+com/example/cdc/CdcController.class
+com/example/cdc/config/AppProperties$Mysql.class

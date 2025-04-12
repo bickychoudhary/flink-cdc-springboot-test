@@ -1,0 +1,105 @@
+{
+  "groups": [
+    {
+      "name": "cdc",
+      "type": "com.example.cdc.config.AppProperties",
+      "sourceType": "com.example.cdc.config.AppProperties"
+    },
+    {
+      "name": "cdc.kafka",
+      "type": "com.example.cdc.config.AppProperties$Kafka",
+      "sourceType": "com.example.cdc.config.AppProperties",
+      "sourceMethod": "getKafka()"
+    },
+    {
+      "name": "cdc.mysql",
+      "type": "com.example.cdc.config.AppProperties$Mysql",
+      "sourceType": "com.example.cdc.config.AppProperties",
+      "sourceMethod": "getMysql()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "cdc.kafka.bootstrap-servers",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.consumer-group",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.login-module",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.password",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.sasl-mechanism",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.schema-registry-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.security-protocol",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.topic",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.kafka.username",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Kafka"
+    },
+    {
+      "name": "cdc.mysql.database",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Mysql"
+    },
+    {
+      "name": "cdc.mysql.hostname",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Mysql"
+    },
+    {
+      "name": "cdc.mysql.password",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Mysql"
+    },
+    {
+      "name": "cdc.mysql.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.cdc.config.AppProperties$Mysql",
+      "defaultValue": 0
+    },
+    {
+      "name": "cdc.mysql.table",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Mysql"
+    },
+    {
+      "name": "cdc.mysql.username",
+      "type": "java.lang.String",
+      "sourceType": "com.example.cdc.config.AppProperties$Mysql"
+    }
+  ],
+  "hints": []
+}
