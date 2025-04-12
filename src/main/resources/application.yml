@@ -1,37 +1,37 @@
 topic: apmt.terminalOperations.apistore.test  #Overwrite with correct topic
-kafkabootstrapservers: pp-we-1-dedicated-apmt-kafka-bootstrap.retina.maersk.io:443
-kafkaUsername: pp.apmt-push-notify.v1
-kafkaPassword: 4y06xTwWix7yceomzJR9SVoiEsEreVzq
-kafkaProducerUserName: pp.apmt-push-notify.v1
-kafkaProducerPassword: 4y06xTwWix7yceomzJR9SVoiEsEreVzq
-kafkaConsumerGroup2: apmt.terminalOperations.apistore
-kafkaSchemaRegistryUrl: https://pp-we-1-dedicated-apmt-kafka-sr.retina.maersk.io/
-kafkaConsumerSchemaRegistryUrl: https://pp-we-1-dedicated-apmt-kafka-sr.retina.maersk.io/
+kafkabootstrapservers: pp-we-1-dedicated-kafka-bootstrap.io:443
+kafkaUsername: pp.push-notify.v1
+kafkaPassword: password
+kafkaProducerUserName: pp.push-notify.v1
+kafkaProducerPassword: password
+kafkaConsumerGroup2: operations.apistore
+kafkaSchemaRegistryUrl: https://pp-we-1-dedicated-kafka-sr.io/
+kafkaConsumerSchemaRegistryUrl: https://pp-we-1-dedicated-kafka-sr.io/
 kafkaConsumerSchemaRegistryApiKey: changeit
 kafkaConsumerSchemaRegistryApiSecret: changeit
 ssl-keystore-location: /Users/vicky/Documents/CDH-Secrets/apmt-keystore 1.jks
-ssl-keystore-password: ljJHdw58qsXWD0c7s8atasjkc
+ssl-keystore-password: test
 ssl-truststore-location: /Users/vicky/Documents/CDH-Secrets/apmt-truststore 1.jks
-ssl-truststore-password: ljJHdw58qsXWD0c7s8atasjkc
+ssl-truststore-password: test
 kafkaProducerLoginModule: "org.apache.kafka.common.security.scram.ScramLoginModule"
 kafkaProducerSecurityProtocol: "SASL_SSL"
 kafkaProducerSaSLMechanism: "SCRAM-SHA-512"
 SPRING_CONFIG_IMPORT: configserver:http://config-server-v1
-kafkaSaslJaasConfig: org.apache.kafka.common.security.scram.ScramLoginModule required  username="pp.apmt-push-notify.v1" password="4y06xTwWix7yceomzJR9SVoiEsEreVzq";
-keystorePassword: ljJHdw58qsXWD0c7s8atasjkc
-truststorePassword: ljJHdw58qsXWD0c7s8atasjkc
+kafkaSaslJaasConfig: org.apache.kafka.common.security.scram.ScramLoginModule required  username="pp.push-notify.v1" password="password";
+keystorePassword: test
+truststorePassword: test
 kafkaSaslMechanism: SCRAM-SHA-512
 
 
 
 cdc:
   mysql:
-    hostname: apmt-apistore.database.windows.net
+    hostname: apistore.database.windows.net
     port: 1433
-    username: api-store-admin
-    password: changeIt01
+    username: api-admin
+    password: password
     database: APIGEE
-    table: APIGEE.dbo.watchlistTopic
+    table: watchlistTopic
 
   kafka:
     bootstrap-servers: ${kafkabootstrapservers}
@@ -46,6 +46,6 @@ cdc:
     consumer-group: ${kafkaConsumerGroup2}
 
     ssl-keystore-location: /Users/vicky/Documents/CDH-Secrets/apmt-keystore\ 1.jks
-    ssl-keystore-password: ljJHdw58qsXWD0c7s8atasjkc
+    ssl-keystore-password: test
     ssl-truststore-location: /Users/vicky/Documents/CDH-Secrets/apmt-truststore\ 1.jks
-    ssl-truststore-password: ljJHdw58qsXWD0c7s8atasjkc
+    ssl-truststore-password: test
